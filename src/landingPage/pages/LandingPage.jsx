@@ -7,23 +7,32 @@ import emailjs from '@emailjs/browser';
 import { Toaster } from "react-hot-toast";
 import toast from "react-hot-toast";
 
-const testimonials = [
-    {"customer_id":1,
+const testimonials = [ 
+    {
+        "customer_id": 1,
         "customer_name": 'Emily Sanchez',
         "position": 'Owner of Emily’s Boutique', 
-        "testimonial_text":"Nova Web Design transformed my business. I run a small boutique, and within days of launching the website, I noticed an increase in foot traffic and online orders."},
-    {"customer_id":2,
+        "testimonial_text": "Nova Web Design boosted my boutique. Soon after launching the site, I saw more foot traffic and online orders."
+    },
+    {
+        "customer_id": 2,
         "customer_name": 'Mark Williams',
         "position": 'Café Corner', 
-        "testimonial_text":"As a local café owner, I struggled to get the word out online. Nova Web Design not only built me a beautiful website but also helped me with social media promotions. My customer base has grown significantly, and it was all at a price I could afford!"},
-    {"customer_id":3,
+        "testimonial_text": "Nova built me a great website and helped with social media. My café’s customer base grew, all within my budget!"
+    },
+    {
+        "customer_id": 3,
         "customer_name": 'Sophia Lee',
         "position": 'Owner of Lee’s Crafts', 
-        "testimonial_text":"I had no idea where to start with promoting my small shop online. Nova Web Design made the whole process easy. They created an amazing website that showcases my products perfectly, and I’ve gained so many new customers through their social media strategies!"},
-    {"customer_id":4,
+        "testimonial_text": "Nova made it easy to promote my shop. The website showcases my products perfectly, and I’ve gained many new customers."
+    },
+    {
+        "customer_id": 4,
         "customer_name": 'Sarah Bennett',
         "position": 'Bookstore Owner', 
-        "testimonial_text":"Their team built a beautiful, easy-to-navigate website for my bookstore. Now my customers can find us online and even order through the site. It’s made a huge difference for my business"},]
+        "testimonial_text": "They built a beautiful, easy-to-navigate site for my bookstore. Now customers can find us online and order through it. A huge improvement!"
+    },
+]
 
 export const LandingPage = () => {
 
@@ -178,7 +187,7 @@ export const LandingPage = () => {
                 <img className="h-[70%]" src="images/landing-page/service-4.svg" alt="" />
                 </div>
             </div>
-            <div className="bg-[#F3F3F3] rounded-xl h-[20rem] shadow-[-9px_10px_0px_0px_rgba(0,0,0,0.75)] mb-10 p-5 flex flex-col justify-between border-2 border-[#404040] md:w-[47%]">
+            <div className="hidden bg-[#F3F3F3] rounded-xl h-[20rem] shadow-[-9px_10px_0px_0px_rgba(0,0,0,0.75)] mb-10 p-5 md:flex flex-col justify-between border-2 border-[#404040] md:w-[47%]">
                 <h3 className="text-3xl bg-[#F2DFD8] w-[13rem] my-4 ml-4 rounded-xl p-1">Web advertising strategies</h3>
                 <div className="flex justify-between items-baseline">
                 
@@ -200,7 +209,7 @@ export const LandingPage = () => {
                 <img className="h-[70%]" src="images/landing-page/service-2.svg" alt="" />
                 </div>
             </div>
-            <div className="bg-[#F3F3F3] rounded-xl h-[20rem] shadow-[-9px_10px_0px_0px_rgba(0,0,0,0.75)] mb-10 p-5 flex flex-col justify-between border-2 border-[#404040] md:w-[47%]">
+            <div className="hidden bg-[#F3F3F3] rounded-xl h-[20rem] shadow-[-9px_10px_0px_0px_rgba(0,0,0,0.75)] mb-10 p-5 md:flex flex-col justify-between border-2 border-[#404040] md:w-[47%]">
                 <h3 className="text-2xl bg-[#F2DFD8] w-[13rem] my-4 ml-4 rounded-xl p-1 md:w-[15rem] md:text-3xl lg:w-[22rem]">Online presence without hassle or high costs</h3>
                 <div className="flex justify-between items-baseline">
                 
@@ -223,11 +232,11 @@ export const LandingPage = () => {
 
         <main>    
             <div className="md:flex md:justify-between">
-            <div className="bg-[#F3F3F3] rounded-xl h-[20rem] shadow-[-9px_10px_0px_0px_rgba(0,0,0,0.75)] mb-10 p-5 flex flex-col justify-between border-2 border-[#404040] md:w-[47%]">                
+            <div className="hidden bg-[#F3F3F3] rounded-xl h-[20rem] shadow-[-9px_10px_0px_0px_rgba(0,0,0,0.75)] mb-10 p-5 md:flex flex-col justify-between border-2 border-[#404040] md:w-[47%]">                
                 <img className="w-full h-[80%] rounded-xl" src="/images/landing-page/proyect-emily.jpeg" alt="" />
                 <p className="font-headings text-center">a clean, user-friendly website for Emily&apos;s Boutique, a small retail business specializing in fashion</p>
             </div>        
-            <div className="bg-[#F3F3F3] rounded-xl h-[20rem] shadow-[-9px_10px_0px_0px_rgba(0,0,0,0.75)] mb-10 p-5 flex flex-col justify-between border-2 border-[#404040] md:w-[47%]">                
+            <div className="hidden bg-[#F3F3F3] rounded-xl h-[20rem] shadow-[-9px_10px_0px_0px_rgba(0,0,0,0.75)] mb-10 p-5 md:flex flex-col justify-between border-2 border-[#404040] md:w-[47%]">                
                 <img className="w-full h-[80%] rounded-xl"  src="/images/landing-page/project-retail-store.jpeg" alt="" />
                 <p className="font-headings text-center">For Fresh Mart Grocery, a local food retailer, we developed a modern website. The site includes a product catalog and a presentation of the store</p>
             </div>        
@@ -270,7 +279,7 @@ export const LandingPage = () => {
                 </ul>
                 <div className="flex flex-col justify-center">
 
-                    <p className="mb-2">Between 70$ - 250$ CAD</p>
+                    <p className="mb-2">100$ - 250$ CAD</p>
                     <button onClick={scrollToSectionContact} className="bg-white border-black border-2 text-[#404040] rounded-lg w-[80%] p-2 self-center">Contact Us</button>
                 </div>
              </div>
@@ -296,7 +305,7 @@ export const LandingPage = () => {
                     </li>
                 </ul>
                 <div className="flex flex-col justify-center">
-                    <p className="mb-2">Between 250$ - 300$ CAD</p>
+                    <p className="mb-2">250$ - 300$ CAD</p>
                     <button onClick={scrollToSectionContact} className="bg-[#404040] text-white rounded-lg w-[80%] p-2 self-center">Contact Us</button>
                 </div>
              </div>
@@ -325,7 +334,7 @@ export const LandingPage = () => {
                     </li>
                 </ul>
                 <div className="flex flex-col justify-center">
-                    <p className="mb-2">Between 300$ - 350$ CAD</p>
+                    <p className="mb-2">300$ - 350$ CAD</p>
                     <button onClick={scrollToSectionContact} className="bg-[#404040] text-white rounded-lg w-[80%] p-2 self-center">Contact Us</button>
                 </div>
              </div>
@@ -447,7 +456,7 @@ export const LandingPage = () => {
 
     <footer className="bg-[#404040] flex flex-col items-center gap-10 py-5 text-center">
         <div className="flex w-full items-center justify-center">
-            <img src="/images/logo-nova.png" className="w-10" alt="" />
+            <img src="/images/logo-nova.jpeg" className="w-10 rounded-full mr-2" alt="" />
             <h4 className="text-white">Nova Web Design</h4>
         </div>
 
